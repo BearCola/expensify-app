@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { removeExpense } from '../actions/expenses';
+import React from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import moment from "moment";
 
 export const ExpenseListItem = ({
   dispatch,
   id,
   description,
   amount,
-  createdAt
+  createdAt,
 }) => (
   <div>
     <Link to={`/edit/${id}`}>
@@ -16,7 +16,7 @@ export const ExpenseListItem = ({
     </Link>
 
     <p>
-      {amount} - {createdAt}
+      {amount} - {moment(createdAt).format("MMMM Do, YYYY")}
     </p>
 
     <br></br>
