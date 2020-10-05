@@ -1,16 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import AppRouter from './routers/AppRouter';
-import configureStore from './store/configureStore';
-import { addExpense } from './actions/expenses';
-import { setTextFilter } from './actions/filters';
-import getVisibleExpense from './selectors/expenses';
-import 'normalize.css/normalize.css';
-import './styles/styles.scss';
-import 'react-dates/lib/css/_datepicker.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import AppRouter from "./routers/AppRouter";
+import configureStore from "./store/configureStore";
+import { addExpense } from "./actions/expenses";
+import { setTextFilter } from "./actions/filters";
+import getVisibleExpense from "./selectors/expenses";
+import "normalize.css/normalize.css";
+import "./styles/styles.scss";
+import "react-dates/lib/css/_datepicker.css";
 
 const store = configureStore();
+
+console.log("test");
 
 // store.dispatch(
 //   addExpense({ description: 'Water bill', amount: 4500, createdAt: 1000 })
@@ -43,4 +45,4 @@ const jsx = (
     <AppRouter />
   </Provider>
 );
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(jsx, document.getElementById("app"));
