@@ -16,7 +16,7 @@ exports[`should render Header correctly 1`] = `
     activeClassName="is-active"
     to="/create"
   >
-    Go create
+    Create Expense
   </NavLink>
 </header>
 `;
